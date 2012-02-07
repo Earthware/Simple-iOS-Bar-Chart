@@ -8,7 +8,6 @@ namespace TechStudio.MonoTouch.Controls
 	using MonoTouch.UIKit;
 	using MonoTouch.UIKit.Extensions;
 	using MonoTouch.CoreGraphics;
-
 	
 	public class BarPlot : UIView
 	{
@@ -76,7 +75,8 @@ namespace TechStudio.MonoTouch.Controls
 			this.AddSubview(background);
 		}
 		
-		private void CreateBars(){
+		private void CreateBars()
+		{
 			
 			this.bars = new List<Bar>();
 			
@@ -100,7 +100,8 @@ namespace TechStudio.MonoTouch.Controls
 			});		
 		}
 		
-		private void DrawLines(){
+		private void DrawLines()
+		{
 			
 			//base line
 			this.AddSubview(new UIView(new RectangleF(this.bounds.Left + this.gapWidth / 2, this.baseLine - 1, this.bounds.Width - this.gapWidth, 2)) { BackgroundColor = UIColor.DarkGray });
@@ -147,7 +148,8 @@ namespace TechStudio.MonoTouch.Controls
 			});
 		}
 		
-		private float CalculateBarY(double val){
+		private float CalculateBarY(double val)
+		{
 			
 			if (val == 0)
 			{
@@ -159,7 +161,8 @@ namespace TechStudio.MonoTouch.Controls
 			return Y;
 		}
 		
-		private float CalculateBarX(int i){
+		private float CalculateBarX(int i)
+		{
 			
 			return (i * this.CalculateBarWidth()) + ((i + 1) * this.gapWidth) + this.bounds.Left;					
 		}
@@ -208,7 +211,8 @@ namespace TechStudio.MonoTouch.Controls
 				this.gap = gap / 2;
 			}
 			
-			public RectangleF GetFinalLabelFrame(){
+			public RectangleF GetFinalLabelFrame()
+			{
 				this.Label.SizeToFit();
 				return new RectangleF((this.Frame.Right - this.Frame.Width / 2) - (this.Label.Frame.Width / 2), this.Frame.Bottom + this.gap - this.Label.Frame.Height / 2, this.Label.Frame.Width, this.Label.Frame.Height);
 			
