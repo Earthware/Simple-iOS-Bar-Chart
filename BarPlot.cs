@@ -1,4 +1,4 @@
-namespace MSDRespiratory.iPad
+namespace TechStudio.MonoTouch.Controls
 {
 	using System;
 	using System.Drawing;
