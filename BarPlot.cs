@@ -77,7 +77,6 @@ namespace TechStudio.MonoTouch.Controls
 		
 		private void CreateBars()
 		{
-			
 			this.bars = new List<Bar>();
 			
 			int i = 0;
@@ -102,7 +101,6 @@ namespace TechStudio.MonoTouch.Controls
 		
 		private void DrawLines()
 		{
-			
 			//base line
 			this.AddSubview(new UIView(new RectangleF(this.bounds.Left + this.gapWidth / 2, this.baseLine - 1, this.bounds.Width - this.gapWidth, 2)) { BackgroundColor = UIColor.DarkGray });
 						
@@ -150,7 +148,6 @@ namespace TechStudio.MonoTouch.Controls
 		
 		private float CalculateBarY(double val)
 		{
-			
 			if (val == 0)
 			{
 				return this.baseLine -1;
@@ -163,12 +160,11 @@ namespace TechStudio.MonoTouch.Controls
 		
 		private float CalculateBarX(int i)
 		{
-			
 			return (i * this.CalculateBarWidth()) + ((i + 1) * this.gapWidth) + this.bounds.Left;					
 		}
 		
-		private float CalculateBarWidth(){
-			
+		private float CalculateBarWidth()
+		{
 			var width = (this.bounds.Width - (this.gapWidth * (this.numberOfBars + 1))) / this.numberOfBars;
 			
 			return width;
@@ -186,8 +182,8 @@ namespace TechStudio.MonoTouch.Controls
 			
 			public UILabel Percentage {get; private set;}
 			
-			public Bar(double val, string text, RectangleF frame, double dataSetTotal, float textHeight, float gap){
-				
+			public Bar(double val, string text, RectangleF frame, double dataSetTotal, float textHeight, float gap)
+			{
 				this.textHeight = textHeight;
 									
 				this.Frame = frame;
