@@ -109,7 +109,6 @@ namespace TechStudio.MonoTouch.Controls
 			this.AddSubview(new UIView(new RectangleF(this.bounds.Left + this.gapWidth / 2, this.baseLine - this.maxHeight / 2, this.bounds.Width - this.gapWidth, 1)){ BackgroundColor = UIColor.LightGray });
 		
 			this.AddSubview(new UIView(new RectangleF(this.bounds.Left + this.gapWidth / 2, this.baseLine - this.maxHeight * 0.75f, this.bounds.Width - this.gapWidth, 1)){ BackgroundColor = UIColor.LightGray });
-
 		}
 
 		public void RaiseBars ()
@@ -210,8 +209,8 @@ namespace TechStudio.MonoTouch.Controls
 			public RectangleF GetFinalLabelFrame()
 			{
 				this.Label.SizeToFit();
+				
 				return new RectangleF((this.Frame.Right - this.Frame.Width / 2) - (this.Label.Frame.Width / 2), this.Frame.Bottom + this.gap - this.Label.Frame.Height / 2, this.Label.Frame.Width, this.Label.Frame.Height);
-			
 			}
 			
 			private void CreatePercentageLabel (float total)
